@@ -54,16 +54,16 @@ Since clustering is an unsupervised learning technique, and the data contains la
 
 To visualize the results, Principal Component Analysis (PCA) was used and data points were colored based on the clusters. To be able to compare the clustering results, PCA was used to visualize the dataset and color data points based on the price categories. Findings are shown in the Results section below.
 
-##### Results
+#### Results
 
 <p align="center">
-    <img src="dhttps://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_cluster_viz.png" alt="Elbow Method for Number of Clusters" width="350"/>
+    <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_cluster_viz.png" alt="Elbow Method for Number of Clusters" width="350"/>
     <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_price_categ_viz.png" alt="Elbow Method for Number of Clusters" width="350"/>
 </p>
 
 It is evident that the mid-price category dominates all clusters. Consequently, due to the lack of clear separation between clusters based on price, further exploration into targeted techniques based on the formed clusters will not be pursued. However, the application of this technique allowed the distribution of the dataset to be observed.
 
-##### Discussion
+#### Discussion
 
 - Instead of using market knowledge to define price ranges, k-means clustering was employed to group the price data points.
 - Principal Component Analysis (PCA) was utilized for visualization, reducing the data to two dimensions by expressing the principal components as a linear combination of original features to capture maximum variance.
@@ -86,7 +86,7 @@ Output label: Price
 
 Since it is a supervised regression task, decision trees and random forest regressor algorithms were used.
 
-##### Visualizations
+#### Visualizations
 
 1. Scatterplots with actual vs predicted price values were plotted to visualize how the models’ predictions fare compared to actual values. The plots were linear indicating that the predictions were close to the actual values.
  <p align="center">
@@ -100,7 +100,7 @@ Since it is a supervised regression task, decision trees and random forest regre
      <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/LearningCurves_RandomForest.png" alt="Learning Curve of Decision Tree Regressor" width="350"/>
 </p>
 
-##### Results
+#### Results
 
 | Model         | Data         | MSE    | R-squared score |
 | ------------- | ------------ | ------ | --------------- |
@@ -109,13 +109,13 @@ Since it is a supervised regression task, decision trees and random forest regre
 | Random Forest | Training Set | 0.0074 | 0.9775          |
 |               | Test Set     | 0.0208 | 0.9379          |
 
-##### Hyperparameter Tuning
+#### Hyperparameter Tuning
 
 Hyperparameter tuning helps in identifying the optimal parameters that result in the best predictions for the model and helps the model to generalize better to unseen data, improving overall performance.
 
 Randomized Search Cross-Validation (CV) was used for hyperparameter tuning of both decision trees and random forest regressors because it is more computationally efficient than an exhaustive grid search and provides a more manageable way to explore different combinations.
 
-##### Discussion
+#### Discussion
 
 For the regression task at hand, Random Forest Regressor outperformed Linear Regression and Decision Trees. The table below summarizes the performance of the three models:
 | Model | MSE | R-squared score |
