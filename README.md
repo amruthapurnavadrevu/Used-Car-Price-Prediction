@@ -1,4 +1,4 @@
-# Used-Car-Price-Prediction
+# Used Car Price Prediction
 
 Due to a decline in car manufacturing, the demand for used cars has surged, creating an exciting opportunity to explore what drives their pricing. This project aims to identify key factors affecting used car prices, such as body type, damage, and historical sales data, and develop a model to predict prices accurately. By integrating both visual and data-driven aspects, this project will help consumers make informed purchases and enable retailers to optimize their inventory, ensuring everyone gets the best value.
 
@@ -14,6 +14,8 @@ License: Data files from the "US Used Cars Dataset" on Kaggle, © Original Autho
 An original dataset of around 10GB with 66 columns was provided. Sampling was performed, resulting in a subset with features most relevant to price prediction, and all subsequent tasks utilize this sampled data. From summary statistics and data visualization, it was concluded that the dataset exhibits a positively skewed price distribution, indicating relatively few items with very high prices compared to the majority. Dataset cleaning was conducted to remove irrelevant data, columns with null values, and duplicate entries.
 
 #### Dataset Cleaning
+
+Jupyter Notebook: [Data Preprocessing](https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Notebooks/CW_PreProcessing.ipynb)
 
 - Filtered irrelevant data:
   - Excluded cars with confirmed salvage value because these vehicles typically have undergone significant damage, and their market values may not accurately reflect the standard pricing of non-damaged vehicles.
@@ -36,18 +38,18 @@ An original dataset of around 10GB with 66 columns was provided. Sampling was pe
 
 ### Main Notebook
 
-This is the link to the main notebook: [Used Car Price Prediction]
+This is the link to the main notebook: [Used Car Price Prediction](https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Notebooks/used_car_price_prediction.ipynb)
 
 ### Clustering
 
-[K-Means Clustering](notebooks/kmeans_clustering.ipynb)
+[K-Means Clustering](https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Notebooks/kmeans_clustering.ipynb)
 
 #### Experimental design
 
 Since clustering is an unsupervised learning technique, and the data contains labels suitable for supervised methods, an alternative approach was taken. First, prices in the dataset were grouped into three categories: low, mid, and high range. Then, k-means clustering was applied to the independent features (excluding price and derived price categories) to identify logical clusters and their relation to price values. The elbow method was used to find the optimal value of k.
 
  <p align="center">
-    <img src="documentation/kmeans_elbow.png?raw=true" alt="Elbow Method for Number of Clusters" width="350"/>
+    <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_elbow.png" alt="Elbow Method for Number of Clusters" width="350"/>
 </p>
 
 To visualize the results, Principal Component Analysis (PCA) was used and data points were colored based on the clusters. To be able to compare the clustering results, PCA was used to visualize the dataset and color data points based on the price categories. Findings are shown in the Results section below.
@@ -55,8 +57,8 @@ To visualize the results, Principal Component Analysis (PCA) was used and data p
 ##### Results
 
 <p align="center">
-    <img src="documentation/kmeans_cluster_viz.png?raw=true" alt="Elbow Method for Number of Clusters" width="350"/>
-    <img src="documentation/kmeans_price_categ_viz.png?raw=true" alt="Elbow Method for Number of Clusters" width="350"/>
+    <img src="dhttps://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_cluster_viz.png" alt="Elbow Method for Number of Clusters" width="350"/>
+    <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/kmeans_price_categ_viz.png" alt="Elbow Method for Number of Clusters" width="350"/>
 </p>
 
 It is evident that the mid-price category dominates all clusters. Consequently, due to the lack of clear separation between clusters based on price, further exploration into targeted techniques based on the formed clusters will not be pursued. However, the application of this technique allowed the distribution of the dataset to be observed.
@@ -72,7 +74,7 @@ It is evident that the mid-price category dominates all clusters. Consequently, 
 
 ### Decision Trees
 
-[Link to notebook](https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/34e717bfd1b91e40e1225f947baa3dd67dd6b5b8/notebooks/DecisionTrees_RandomForests.ipynb)
+[Link to notebook](https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Notebooks/DecisionTrees_RandomForests.ipynb)
 
 #### Experimental design
 
@@ -88,14 +90,14 @@ Since it is a supervised regression task, decision trees and random forest regre
 
 1. Scatterplots with actual vs predicted price values were plotted to visualize how the models’ predictions fare compared to actual values. The plots were linear indicating that the predictions were close to the actual values.
  <p align="center">
-    <img src="https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/main/documentation/Scatterplot_DecisionTrees.png?raw=true" alt="Predicted vs Actual Values - Decision Trees" width="350"/>
-    <img src="https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/main/documentation/Scatterplot_RandomForest.png?raw=true" alt="Predicted vs Actual Values - Random Forest" width="350"/>
+    <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/Scatterplot_DecisionTrees.png" alt="Predicted vs Actual Values - Decision Trees" width="350"/>
+    <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/Scatterplot_RandomForest.png" alt="Predicted vs Actual Values - Random Forest" width="350"/>
 </p>
 
 2. Learning curves for both decision trees and random forest regressor show if the models are underfitting or overfitting. In our case, the models are learning well from the training data. However, there is scope for improvement. This is a conscious choice since we’ve prioritized computational efficiency over performance.
 <p align="center">
-     <img src="https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/main/documentation/LearningCurves_DecisionTrees.png?raw=true" alt="Learning Curve of Decision Tree Regressor" width="350"/>
-     <img src="https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/main/documentation/LearningCurves_RandomForest.png?raw=true" alt="Learning Curve of Decision Tree Regressor" width="350"/>
+     <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/LearningCurves_DecisionTrees.png" alt="Learning Curve of Decision Tree Regressor" width="350"/>
+     <img src="https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Visualisations/LearningCurves_RandomForest.png" alt="Learning Curve of Decision Tree Regressor" width="350"/>
 </p>
 
 ##### Results
@@ -126,7 +128,7 @@ Linear Regression assumes that the features and target variable have a linear re
 
 The hyperparameter tuning has helped the performance because tuning helps find the parameters at which the model’s performance is optimized.
 
-[Link to Linear Regression implementation](https://github.com/dmml-heriot-watt/group-coursework-sa3n/blob/34e717bfd1b91e40e1225f947baa3dd67dd6b5b8/notebooks/LinearRegression.ipynb)
+[Link to Linear Regression implementation](https://github.com/amruthapurnavadrevu/Used-Car-Price-Prediction/blob/main/Notebooks/LinearRegression.ipynb)
 
 
 ### Conclusion
