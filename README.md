@@ -133,6 +133,6 @@ The hyperparameter tuning has helped the performance because tuning helps find t
 
 ### Conclusion
 
-In this coursework, we delve into two primary aspects: predicting used car prices. Clustering identifies data distribution and outliers, while decision trees identify key features that influence pricing. Our validated hypothesis asserts that the random forest regressor surpasses both decision trees and linear regression in predicting the price. 
+For used car price prediction, clustering was used to identify data distribution and outliers, while decision trees were used to identify key features that influence pricing. The validated hypothesis asserts that the random forest regressor surpasses both decision trees and linear regression in predicting the price. 
 
 The dataset is deemed realistic as it encompasses a diverse range of cars, spanning from low-end to luxury vehicles. The insights into key features influencing prices align with intuition, instilling confidence in the models' potential performance if deployed. However, it's crucial to acknowledge a trade-off between performance and computational efficiency in our models. While the accuracy may not be flawless, it is sufficiently high to provide valuable insights into the influential features and offer a reliable estimate of prices for a given set of features. If deployed, potential challenges related to computational efficiency could be mitigated by optimizing algorithms or leveraging parallel processing capabilities, ensuring a balance between accuracy and efficiency.
